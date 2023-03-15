@@ -475,6 +475,10 @@ rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Accou
 
 rule=: 4648: A logon was attempted using explicit credentials. Subject: Security ID: %subject-sid:word% Account Name: %subject-account:string-to: Account Domain% Account Domain: %subject-domain:word% Logon ID: %-:word% Logon GUID: %-:word% Account Whose Credentials Were Used: Account Name: %username:string-to: Account Domain% Account Domain: %target-domain:word% Logon GUID: %-:word% Target Server: Target Server Name: %hostname:word% %-:rest%
 
+# 4720: A user account was created
+
+rule=: 4720: A user account was created. Subject: Security ID: %subject-sid:word% Account Name: %subject-account:word% Account Domain: %subject-domain:word% Logon ID: %-:word% New Account: Security ID: %user-sid:word% Account Name: %username:string-to: Account Domain% Account Domain: %-:rest%
+
 # 4724: An attempt was made to reset an account's password
 
 rule=: 4724: An attempt was made to reset an account's password. Subject: Security ID: %subject-sid:word% Account Name: %subject-account:string-to: Account Domain% Account Domain: %-:word% Logon ID: %-:word% Target Account: Security ID: %target-sid:word% Account Name: %username:string-to: Account Domain% Account Domain: %-:rest%
